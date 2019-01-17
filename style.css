@@ -1,0 +1,641 @@
+/* 
+Theme Name: Milos Konstantinovic
+Author: Jasmina Konstantinovic
+Text Domain: aa-milos
+Domain Path: /languages
+*/
+
+/* FONTS */
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('fonts/Montserrat-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('fonts/Montserrat-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('fonts/Roboto-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('fonts/Roboto-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	/*background: transparent url("images/BG.jpg") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover; */
+
+	font-family: 'Montserrat-Regular', sans-serif;
+	font-size: 15px;
+	color: #333;
+	margin: 0;
+	background-color: #fff; /* #373c44; */
+	height: 100%;
+}
+/*#background {
+	background: transparent url("images/f2.png") repeat left top;
+}*/
+a:link, a:visited {
+	color: rgb(201,218,203);/*#006ac3;*/
+	text-decoration: none;
+}
+
+p {
+	line-height: 1.65em;
+	text-align: justify;
+	margin: 0;
+	padding: 1em 0;
+}
+h2 {font-family: 'Montserrat-Regular', sans-serif; font-size: 1.3em;}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* GENERAL LAYOUT */
+.wrapper {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.main-container {
+	flex: 1 100%;
+}
+.site-header, .main, .site-footer {
+	max-width: 92%;
+	margin: auto;
+}
+article.post {
+	padding: 20px 4%;
+}
+article.post a:link, article.post a:visited {
+  color: rgb(161,174,163);
+}
+article.post a:hover {
+  color: #000;
+}
+article.page h2 {
+  font-size: 300%;
+}
+
+/* Clearfix - Use clearfix class on parent to clear nested columns */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  clear: both;
+  *zoom: 1;
+}
+
+/* Flex box */
+.flex {
+  display: -webkit-box; 
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  display: flex; 
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; 
+
+  -webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	
+}
+.flex1 {
+	box-sizing: border-box;
+	-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1;         /* OLD - Firefox 19- */
+  -webkit-flex: 1;          /* Chrome */
+  -ms-flex: 1;              /* IE 10 */
+  flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+}
+.flex1:last-child { 
+  margin-right: 0; 
+}
+.flex2 {
+	-webkit-box-flex: 2;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 2;         /* OLD - Firefox 19- */
+  -webkit-flex: 2;          /* Chrome */
+  -ms-flex: 2;              /* IE 10 */
+  flex: 2;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */ 
+}
+.top-nav {
+	align-self: flex-end;
+	padding-right: 2.5%;
+}
+
+/* 
+========================================
+HEADER 
+======================================== 
+*/
+
+.header-container, .main-container, .footer-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.header-container {
+	background-color: #23282d;
+}
+.site-header h2 {
+	margin: 5px 0;
+}
+
+.site-header h5 {
+	font-family: 'Montserrat-Light',sans-serif;
+	color: #f1f1f1;
+	margin: 0;
+	text-transform: uppercase;
+}
+.logo {
+	margin: 0 4%;
+  height: 60px
+}
+/* 
+========================================
+NAVIGATION 
+========================================
+*/
+.site-header .nav-menu { 
+  float: right; 
+}
+.site-header .nav-menu ul {
+	margin: 0;
+	padding: 0;
+}
+.site-header .nav-menu ul li {
+	float: left;
+}
+
+.site-header ul.menu li a:link, 
+.site-header ul.menu li a:visited {
+	display: block;
+	padding: 20px 18px;
+	border: none;
+	text-decoration: none;
+	color: rgb(201,218,203);
+}
+.site-header ul.menu li a:hover {
+  color: #fff;
+}
+
+.site-header ul.menu li.current-menu-item,
+.site-header ul.menu li.current-menu-ancestor {
+	background-color: rgb(201,218,203);
+}
+
+.site-header ul.menu > li.current-menu-item > a, 
+.site-header ul.menu > li.current-menu-ancestor > a,
+.site-header ul.menu > li.current-post-ancestor > a,
+.site-header ul.menu > li.current-post-parent > a {
+	background-color: rgb(201,218,203);
+  color: #000;
+}
+
+/* Link Hover Effect */
+.site-header ul.menu li a {
+	position: relative;
+}
+.site-header ul.menu li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background: rgb(201,218,203);
+    transition: width .3s;
+}
+.site-header ul.menu li a:hover::after {
+    width: 100%;
+ 	/*transition: width .3s;*/
+}
+.site-header ul.sub-menu li.current-menu-item {
+    background-color: #23282d; 
+}
+.site-header ul.sub-menu li.current-menu-item a::after,
+.site-header ul.menu li.current-post-parent a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: rgb(201,218,203);
+}
+
+/* DESKTOP SUB-MENU */
+
+@media only screen and (min-width: 960px) {
+  .site-header ul.menu li {
+    position: relative;
+  }
+  .site-header ul.menu li ul.sub-menu {	
+  	background-color: #373c44;
+  	position: absolute;
+  	left: 0;
+  	visibility: hidden;
+  	opacity: 0;
+  	transition: opacity 0.5s linear;
+  	z-index: 1;
+  }
+  .site-header ul.menu li:hover ul.sub-menu {
+  	visibility: visible;
+  	opacity: 1;
+  }
+}
+
+.site-header ul.menu li ul.sub-menu li {
+	float: none;
+}
+.site-header ul.menu li ul.sub-menu li a {
+	white-space: nowrap;
+}
+
+
+/* MOBILE MENU */
+.menu-trigger {
+    display: none;
+  }
+
+@media only screen and (max-width: 960px) {
+  
+  header.flex {
+    flex-direction: column;
+    width: 100%;
+  }
+  .logo {
+    height: 65px;
+  }
+  .top-nav {
+    align-self: flex-start;
+    padding: 0 4%;
+    width: 100%;
+  }
+  .site-header .nav-menu, .site-header .nav-menu ul li { 
+    float: none; 
+    background-color: #23282d;
+  }
+
+  .site-header ul.menu > li > a:link {
+    text-transform: uppercase;
+    font-family: 'Montserrat-Medium', sans-serif;
+  }
+
+  /* Mobile Sub-menu */
+  .site-header ul.sub-menu {  
+    visibility: visible;
+    opacity: 1;
+  }
+  .site-header ul.menu li ul.sub-menu li a {
+    margin-left: 10px;
+    display: list-item;  
+    list-style-type: disc;
+    list-style-position: inside;
+    padding: 15px;
+  }
+
+  .menu-trigger {
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font: normal 13px 'Montserrat-Medium', sans-serif;
+    color: rgb(201,218,203);
+    text-align: right;
+    padding: 10px 0;
+    border-top: 1px dotted rgb(201,218,203);
+    cursor: pointer;
+
+  }
+  .nav-menu {
+    display: none;
+  }
+  .nav-menu ul.menu {
+    border-top: 1px dotted rgb(201,218,203);
+  }
+  .nav-expanded {
+    display: block;
+  }
+  
+}
+
+
+/* BREADCRUMBS PLUGIN */
+.breadcrumbs{
+	font-family: 'Roboto-Regular',sans-serif;
+	padding: 10px 4%;
+	font-size: 11px;
+  text-transform: uppercase;
+}
+.breadcrumbs a {
+	color: rgb(161,174,163);
+	text-decoration: underline;
+}
+.main-front-page .breadcrumbs a {
+  color: #23282d;
+}
+
+/* 
+========================================
+MAIN 
+========================================
+*/
+.main-front-page {
+	background-color: rgb(201,218,203);
+	
+}
+
+/* 
+========================================
+FOOTER MENU 
+========================================
+*/
+.footer-home {
+  background-color: rgb(201,218,203);
+}
+.footer-container {
+  
+  padding: 0 4%;
+}
+.site-footer {
+	padding: 20px 0 10px;
+}
+.site-footer .nav-menu ul li {
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px dotted #BBB;
+}
+.blog-info {
+	font-family: 'Roboto-Regular',sans-serif;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: #000;
+}
+
+
+/*
+========================================
+CATEGORY PAGE / TEASERS
+========================================
+*/
+
+* {
+  box-sizing: border-box;
+}
+ul.teaser {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2%;
+}
+ul.teaser h2 {
+  padding: 2%;
+}
+li.teaser-item {
+	display: flex; 
+  padding: 2%;
+	width: 50%;
+}
+@media all and (min-width: 40em) {
+  	li.teaser-item {
+  		width: 33.33%;
+  	}
+}
+@media all and (min-width: 60em) {
+  	li.teaser-item {
+    	width: 25%;
+  	}
+}
+a.teaser-content {
+	background-color: #f1f1f1;
+	color: #000;
+	text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.teaser-meta, .teaser-text, .teaser-bottom {
+	padding: 0 15px;
+	margin: 0;
+}
+.teaser-meta {
+	font-size: 0.9em;
+}
+.teaser-text {
+	flex: 1 0 auto;
+	font-family: 'Montserrat-Bold', sans-serif;
+	font-size: 1.3em;
+	text-align: left;
+	padding-bottom: 15%;
+}
+.teaser-bottom {
+	padding-bottom: 1.3em;
+}
+
+/* Teaser Hover effect (Zoom) */
+.teaser-image {
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: 1em;
+}
+a.teaser-content, .teaser-image img {
+  -moz-transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s ease-out, transform 0.6s ease-out;
+}
+a.teaser-content:hover .teaser-image img {
+  -moz-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  opacity: 0.6;
+}
+a.teaser-content:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+/*
+========================================
+ FRONT PAGE 
+ ========================================
+ */
+
+.naslov {
+	min-height: 680px;
+	justify-content: center;
+	align-items: center;
+}
+.naslov-child {
+	text-align: center;
+}
+.naslov-child .aa {
+	font-family: 'Montserrat-Regular', sans-serif;
+	font-size: 32px;
+	text-transform: uppercase;
+}
+.naslov-child .mk {
+	font-family: 'Montserrat-Black', sans-serif;
+	font-size: 240px;
+}
+.naslov-child a:link, .naslov-child a:visited {
+	color: #23282d;
+	-moz-transition: all 0.6s;
+  	-webkit-transition: all 0.6s;
+  	transition: all 0.6s ease-out, transform 0.6s ease-out;
+} 
+.naslov-child a:hover {
+	opacity: 0.4;
+} 
+
+/*========================================*/
+
+/* Gallery Lightbox*/
+
+.rl-gallery-item-content {
+  overflow: hidden;  
+}
+.rl-gallery-item-content img {
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s ease-out, transform 0.2s ease-out;
+}
+.rl-gallery-item-content:hover img {
+  -moz-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  opacity: 0.4;
+}
+.rl-gallery-item-content:hover {
+  background-color: #000;
+}
+
+/*=== Crno-bele slike, on hover u boji ===*/
+
+/*.bw .rl-gallery-item-content img {
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}*/
+
+.bw .rl-gallery-item-content:hover img {
+    /*
+    -webkit-filter: none; 
+    filter: none;
+    */
+    opacity: 0.8;
+}
+
+/*=== CUSTOM STYLE FOR SIMPLE GALLERY ===*/
+
+.blocks-gallery-item {
+  overflow: hidden;
+}
+.blocks-gallery-item img {
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s ease-out, transform 0.2s ease-out;   
+}
+.blocks-gallery-item img:hover {
+  -webkit-filter: none; 
+  filter: none;
+
+  -moz-transform: scale(1.08);
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+/*
+.blocks-gallery-item img {
+  -webkit-filter: grayscale(100%); 
+  filter: grayscale(100%);
+}
+.blocks-gallery-item img:hover {
+  -webkit-filter: none; 
+  filter: none;
+}
+*/
+/*.blocks-gallery-item:hover {
+  opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier 
+}*/
+
+@keyframes onload {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+main {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 onload;
+
+}
